@@ -6,9 +6,13 @@ if(isset($_POST['submit'])){
     $user = $_POST['full_name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $password = $_POST['password2'];
+    $password2 = $_POST['password2'];
 
     // Instantiate SignUpControl class
-    
+    include "../classes/signup.class.php";
+    include "../classes/signupcontr.class.php";
+
+    $signup = new SignUpContr($user, $email, $password, $password2);
+
 
 }

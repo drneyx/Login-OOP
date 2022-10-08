@@ -14,4 +14,31 @@ class SignUpContr {
         $this->password = $password;
         $this->password2 = $password2;
     }
+
+    private function emptyInput(){
+        $result;
+
+        if(empty($this->user || empty($this->email) || empty($this->password) || empty($this->password2))){
+            $result = false;
+
+        } else {
+            $result = true;
+        }
+
+        return $result;
+    }
+
+
+    private function invalidUid(){
+        $result;
+
+        if(!preg_match("/^[a-zA-Z0-9]*$/", $this->user)){
+            $result = false;
+        }
+        else{
+            $result = true;
+        }
+
+        return $result;
+    }
 }
