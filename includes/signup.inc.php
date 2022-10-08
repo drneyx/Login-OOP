@@ -9,10 +9,15 @@ if(isset($_POST['submit'])){
     $password2 = $_POST['password2'];
 
     // Instantiate SignUpControl class
+    include "../classes/dbh.class.php";
     include "../classes/signup.class.php";
     include "../classes/signupcontr.class.php";
 
     $signup = new SignUpContr($user, $email, $password, $password2);
+
+    $signup->signUpUser();
+
+    header("location: ../index.php?error=none");
 
 
 }
