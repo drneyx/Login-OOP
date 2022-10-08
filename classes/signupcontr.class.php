@@ -1,6 +1,6 @@
 <?php
 
-class SignUpContr {
+class SignUpContr extends SignUp {
 
     private $user;
     private $email;
@@ -13,6 +13,37 @@ class SignUpContr {
         $this->email = $email;
         $this->password = $password;
         $this->password2 = $password2;
+    }
+
+
+    private function signUpUser(){
+        if($this->emptyInput() == false){
+            header('location: ../index.php?error=emptyinput');
+            exit();
+        }
+
+        if($this->invalidUid() == false){
+            header('location: ../index.php?error=invaliduser');
+            exit();
+        }
+
+        if($this->invalidEmail() == false){
+            header('location: ../index.php?error=email');
+            exit();
+        }
+
+        if($this->passMatch() == false){
+            header('location: ../index.php?error=password');
+            exit();
+        }
+
+
+        if($this->userExists() == false){
+            header('location: ../index.php?error=userexists');
+            exit();
+        }
+
+        $this->setUser();
     }
 
     private function emptyInput(){
@@ -68,5 +99,19 @@ class SignUpContr {
 
         return $result;
     }
+
+    private function userExists(){
+        $result;
+
+        if($this->checkUser(!$this->user, $this->email)){
+            $result = false;
+        }
+        else {
+            $result = true;
+        }
+ 
+        return $result;
+    }
+
 
 }
