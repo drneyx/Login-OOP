@@ -41,4 +41,32 @@ class SignUpContr {
 
         return $result;
     }
+
+    private function invalidEmail(){
+        $result;
+
+        if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)){
+            $result = false;
+        }
+
+        else {
+            $result = true;
+        }
+
+        return $result;
+    }
+
+    private function passMatch(){
+        $result;
+
+        if($this->password !== $this->password2){
+            $result = false;
+        }
+        else {
+            $result = true;
+        }
+
+        return $result;
+    }
+
 }
