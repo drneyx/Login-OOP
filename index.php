@@ -14,16 +14,16 @@
     <input type="checkbox" id="flip">
     <div class="cover">
       <div class="front">
-        <!--<img src="images/frontImg.jpg" alt="">-->
+        <img src="images/frontImg.jpg" alt="">
         <div class="text">
           <span class="text-1">Every new friend is a <br> new adventure</span>
           <span class="text-2">Let's get connected</span>
         </div>
       </div>
       <div class="back">
-        <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
+        <img class="backImg" src="images/backImg.jpg" alt="">
         <div class="text">
-          <span class="text-1">Complete miles of journey <br> with one step</span>
+          <span class="text-1">HII Complete miles of journey <br> with one step</span>
           <span class="text-2">Let's get started</span>
         </div>
       </div>
@@ -36,11 +36,11 @@
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" required>
+                <input type="text" placeholder="Enter your email" name="email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required>
+                <input type="password" placeholder="Enter your password" name="password" required>
               </div>
               <div class="text"><a href="#">Forgot password?</a></div>
               <div class="button input-box">
@@ -56,15 +56,15 @@
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Enter your name" required>
+                <input type="text" placeholder="Enter your name" name="full_name" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" required>
+                <input type="text" placeholder="Enter your email" name="email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required>
+                <input type="password" placeholder="Enter your password" name="password" required>
               </div>
               <div class="button input-box">
                 <input type="submit" value="Sumbit">
