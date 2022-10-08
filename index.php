@@ -66,6 +66,11 @@
                 <i class="fas fa-lock"></i>
                 <input type="password" placeholder="Enter your password" name="password" required>
               </div>
+
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Confirm  your password" name="password2" required>
+              </div>
               <div class="button input-box">
                 <input type="submit" value="Sumbit">
               </div>
